@@ -5,8 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t Agondov/docker-react -f Dockerfile.dev .
-
+  - docker build -t gondov/docker-react -f Dockerfile.dev .
 script:
-  - docker run -e CI=true Agondov/docker-react npm run test
+  - docker run -e CI=true gondov/docker-react npm run test
              
